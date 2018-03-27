@@ -11,16 +11,7 @@ function Card(id, name) {
 		var cardDeleteBtn = $('<button class="btn-delete">x</button>');
 		var cardDescription = $('<p class="card-description"></p>');
 
-	removeCard: function() {
-	   var self = this;
-	   $.ajax({
-	     url: baseUrl + '/card/' + self.id,
-	     method: 'DELETE',
-	     success: function(){
-	       self.$element.remove();
-	     }
-	   });
-	}
+
 	cardDeleteBtn.click(function(){
 		self.removeCard();
 	});
@@ -31,8 +22,16 @@ function Card(id, name) {
 	return card;
 	}
 }
+
 Card.prototype = {
 	removeCard: function() {
-	  this.element.remove();
+	   var self = this;
+	   $.ajax({
+	     url: baseUrl + '/card/' + self.id,
+	     method: 'DELETE',
+	     success: function(){
+	       self.$element.remove();
+	     }
+	   });
 	}
 }
