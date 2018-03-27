@@ -1,7 +1,7 @@
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 var myHeaders = {
-  'X-Client-Id': '3081',
-  'X-Auth-Token': '34a7c935acd93331038dbdaa402dabef'
+  'X-Client-Id': 'X-Client-Id',
+  'X-Auth-Token': 'X-Auth-Token'
 };
 
 $.ajaxSetup({
